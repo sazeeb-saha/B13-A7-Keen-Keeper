@@ -7,6 +7,7 @@ import RootLayout from "./layout/RootLayout";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Timeline from "./pages/timeline/Timeline";
 import Homepage from "./pages/homepage/Homepage";
+import FriendDetails from "./pages/friendDetails/FriendDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/timeline",
         element: <Timeline />,
+      },
+      {
+        path: "/friendDetails/:id",
+        element: <FriendDetails />,
       },
     ],
     errorElement: <NotFoundPage />,

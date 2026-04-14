@@ -1,25 +1,9 @@
-import React, { useEffect, useState } from "react";
 import FriendCard from "../Ui/FriendCard";
 import { PropagateLoader } from "react-spinners";
+import useData from "../../hooks/useData";
 
 const YourFriends = () => {
-  const [friends, setFriends] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data.json");
-      const data = await res.json();
-      //   console.log(data);
-      setTimeout(() => {
-        setFriends(data);
-        setLoading(false);
-      }, 3500);
-    };
-    fetchData();
-  }, []);
-
-  //   console.log(friends);
+  const { friends, loading } = useData();
 
   return (
     <div className="container mx-auto mb-10">
