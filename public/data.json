@@ -30,7 +30,7 @@
     "email": "michael.smith@yahoo.com",
     "days_since_contact": 20,
     "status": "Almost due",
-    "tags": ["office", "colleague"],
+    "tags": ["Office", "Colleague"],
     "bio": "Work colleague from previous company.",
     "goal": 15,
     "next_due_date": "2025-07-18"
