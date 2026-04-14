@@ -7,10 +7,10 @@ import EmptyTimeline from "../../components/Ui/EmptyTimeline";
 
 const Timeline = () => {
   const { checkInFriends } = useContext(CheckInContext);
-  console.log(checkInFriends);
+  // console.log(checkInFriends);
 
   return (
-    <div className="container mx-auto mt-10 mb-10 space-y-4">
+    <div className="container min-h-[60vh] mx-auto mt-10 mb-10 space-y-4">
       <div className="w-10/12 mx-auto">
         <h2 className="text-2xl font-bold mb-4">Timeline</h2>
 

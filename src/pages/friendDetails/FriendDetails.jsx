@@ -10,6 +10,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { CheckInContext } from "../../context/CheckInProvider";
 import { toast } from "react-toastify";
+import { addToLocalDB } from "../../utils/localDB";
 
 const FriendDetails = () => {
   const { checkInFriends, setCheckInFriends } = useContext(CheckInContext);
@@ -40,6 +41,7 @@ const FriendDetails = () => {
     };
 
     setCheckInFriends([...checkInFriends, newEvent]);
+    addToLocalDB(newEvent);
 
     if (type === "Call") {
       toast.success(`Called ${expectedFriend.name} `, {
