@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router";
 import useData from "../../hooks/useData";
 import { PropagateLoader } from "react-spinners";
@@ -8,8 +8,14 @@ import { IoVideocamOutline } from "react-icons/io5";
 import { LuArchive } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
+import { CheckInContext } from "../../context/CheckInProvider";
+import { toast } from "react-toastify";
 
 const FriendDetails = () => {
+  const { checkInFriends, setCheckInFriends } = useContext(CheckInContext);
+
+  // console.log(checkIn);
+
   const { id } = useParams();
   // console.log(id);
   const { friends, loading } = useData();
@@ -23,6 +29,56 @@ const FriendDetails = () => {
 
   const expectedFriend = friends.find((friend) => friend.id === Number(id));
   //   console.log(expectedFriend);
+
+  const handleCheckIn = (type) => {
+    const newEvent = {
+      id: Date.now(),
+      friendId: expectedFriend.id,
+      name: expectedFriend.name,
+      type: type,
+      time: new Date().toISOString(),
+    };
+
+    setCheckInFriends([...checkInFriends, newEvent]);
+
+    if (type === "Call") {
+      toast.success(`Called ${expectedFriend.name} `, {
+        hideProgressBar: true,
+        position: "top-center",
+        style: {
+          background: "rgba(34, 197, 94, 0.2)",
+          backdropFilter: "blur(10px)",
+          color: "#166534",
+          border: "1px solid rgba(34,197,94,0.3)",
+          borderRadius: "20px",
+        },
+      });
+    } else if (type === "Text") {
+      toast.success(`Texted ${expectedFriend.name} `, {
+        hideProgressBar: true,
+        position: "top-center",
+        style: {
+          background: "rgba(34, 197, 94, 0.2)",
+          backdropFilter: "blur(10px)",
+          color: "#166534",
+          border: "1px solid rgba(34,197,94,0.3)",
+          borderRadius: "20px",
+        },
+      });
+    } else {
+      toast.success(`Video Called ${expectedFriend.name} `, {
+        hideProgressBar: true,
+        position: "top-center",
+        style: {
+          background: "rgba(34, 197, 94, 0.2)",
+          backdropFilter: "blur(10px)",
+          color: "#166534",
+          border: "1px solid rgba(34,197,94,0.3)",
+          borderRadius: "20px",
+        },
+      });
+    }
+  };
 
   return (
     <div className="container mx-auto mt-20 mb-20">
@@ -122,13 +178,22 @@ const FriendDetails = () => {
             <div className="bg-white shadow p-6">
               <h2 className="text-xl font-medium mb-1">Quick Check-In</h2>
               <div className="grid grid-cols-3 gap-6">
-                <div className="btn p-6 flex-col h-fit text-lg  ">
+                <div
+                  onClick={() => handleCheckIn("Call")}
+                  className="btn p-6 flex-col h-fit text-lg  "
+                >
                   <PiPhoneCallBold className="text-4xl" /> Call
                 </div>
-                <div className="btn p-6 flex-col h-fit text-lg ">
+                <div
+                  onClick={() => handleCheckIn("Text")}
+                  className="btn p-6 flex-col h-fit text-lg "
+                >
                   <MdOutlineTextsms className="text-4xl" /> Text
                 </div>
-                <div className="btn p-6 flex-col h-fit text-lg ">
+                <div
+                  onClick={() => handleCheckIn("Video")}
+                  className="btn p-6 flex-col h-fit text-lg "
+                >
                   <IoVideocamOutline className="text-4xl" />
                   <p>Video</p>
                 </div>

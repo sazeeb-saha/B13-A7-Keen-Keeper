@@ -8,6 +8,8 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Timeline from "./pages/timeline/Timeline";
 import Homepage from "./pages/homepage/Homepage";
 import FriendDetails from "./pages/friendDetails/FriendDetails";
+import CheckInProvider from "./context/CheckInProvider";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CheckInProvider>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </CheckInProvider>
   </StrictMode>,
 );

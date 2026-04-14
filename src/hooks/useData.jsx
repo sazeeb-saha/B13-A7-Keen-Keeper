@@ -12,7 +12,7 @@ const useData = () => {
       setTimeout(() => {
         setFriends(data);
         setLoading(false);
-      }, 3500);
+      }, 200);
     };
     fetchData();
   }, []);
