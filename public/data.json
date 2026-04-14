@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+    "email": "john@example.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. Love hiking together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Ayesha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+    "email": "ayesha.rahman@gmail.com",
+    "days_since_contact": 5,
+    "status": "on track",
+    "tags": ["school", "best friend"],
+    "bio": "School friend. We talk about everything.",
+    "goal": 10,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 3,
+    "name": "Michael Smith",
+    "picture": "https://randomuser.me/api/portraits/men/3.jpg",
+    "email": "michael.smith@yahoo.com",
+    "days_since_contact": 20,
+    "status": "Almost due",
+    "tags": ["office", "colleague"],
+    "bio": "Work colleague from previous company.",
+    "goal": 15,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 4,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/4.jpg",
+    "email": "nusrat.jahan@gmail.com",
+    "days_since_contact": 2,
+    "status": "on track",
+    "tags": ["family", "cousin"],
+    "bio": "My cousin. We meet at family events.",
+    "goal": 7,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 5,
+    "name": "David Lee",
+    "picture": "https://randomuser.me/api/portraits/men/5.jpg",
+    "email": "david.lee@outlook.com",
+    "days_since_contact": 9,
+    "status": "Almost due",
+    "tags": ["gym", "friend"],
+    "bio": "Gym buddy. Keeps me motivated.",
+    "goal": 12,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 6,
+    "name": "Fatima Khan",
+    "picture": "https://randomuser.me/api/portraits/women/6.jpg",
+    "email": "fatima.khan@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["neighbor"],
+    "bio": "Friendly neighbor. We often share food.",
+    "goal": 14,
+    "next_due_date": "2025-07-19"
+  },
+  {
+    "id": 7,
+    "name": "Rahim Uddin",
+    "picture": "https://randomuser.me/api/portraits/men/7.jpg",
+    "email": "rahim.uddin@gmail.com",
+    "days_since_contact": 7,
+    "status": "on track",
+    "tags": ["university", "project partner"],
+    "bio": "Worked on multiple projects together.",
+    "goal": 10,
+    "next_due_date": "2025-07-24"
+  },
+  {
+    "id": 8,
+    "name": "Emily Carter",
+    "picture": "https://randomuser.me/api/portraits/women/8.jpg",
+    "email": "emily.carter@gmail.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["online friend"],
+    "bio": "Met online through a coding community.",
+    "goal": 20,
+    "next_due_date": "2025-07-15"
+  }
+]

@@ -35,10 +35,16 @@ const Footer = () => {
           <div className="text-white opacity-60">
             <p>© 2026 KeenKeeper. All rights reserved.</p>
           </div>
-          <div className="flex items-center gap-4 text-white opacity-60">
-            <p className="cursor-pointer">Privacy </p>
-            <p>Term & Service</p>
-            <p>Cookies</p>
+          <div className="flex items-center gap-4 ">
+            <p className="cursor-pointer  text-white opacity-60 hover:opacity-100">
+              Privacy{" "}
+            </p>
+            <p className="cursor-pointer  text-white opacity-60 hover:opacity-100">
+              Term & Service
+            </p>
+            <p className="cursor-pointer  text-white opacity-60 hover:opacity-100">
+              Cookies
+            </p>
           </div>
         </div>
       </div>

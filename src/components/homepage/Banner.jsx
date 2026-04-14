@@ -29,7 +29,7 @@ const Banner = () => {
           <h2 className="font-semibold text-3xl mb-2 ">06</h2>
           <p>Need Attention</p>
         </div>
-        <div className="text-center shadow bg-white px-4 py-8 w-full ">
+        <div className="text-center shadow bg-white px-4 py-8 w-full  ">
           <h2 className="font-semibold text-3xl mb-2 ">12</h2>
           <p>Interactions This Month</p>
         </div>
