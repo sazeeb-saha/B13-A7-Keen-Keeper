@@ -10,6 +10,7 @@ import Homepage from "./pages/homepage/Homepage";
 import FriendDetails from "./pages/friendDetails/FriendDetails";
 import CheckInProvider from "./context/CheckInProvider";
 import { ToastContainer } from "react-toastify";
+import Stats from "./pages/stats/Stats";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/friendDetails/:id",
         element: <FriendDetails />,
+      },
+      {
+        path: "/stats",
+        element: <Stats />,
       },
     ],
     errorElement: <NotFoundPage />,
