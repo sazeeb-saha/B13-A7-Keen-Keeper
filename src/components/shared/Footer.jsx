@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="bg-[#244D3F] py-20">
       <div className="container mx-auto">
         <div className="text-center ">
-          <div className="flex items-center justify-center ">
+          <div className="flex items-center justify-center max-w-[80%] mx-auto  ">
             <img src={footerLogo} alt="Logo" />
           </div>
           <p className="text-white opacity-70 mt-3">
