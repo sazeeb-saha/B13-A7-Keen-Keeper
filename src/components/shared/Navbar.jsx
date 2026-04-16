@@ -65,7 +65,9 @@ const Navbar = () => {
               </NavLink>
             </ul>
           </div>
-          <img src={navLogo} alt="" className="h-[50px] w-[190px]" />
+          <NavLink to="/" className="flex items-center p-2">
+            <img src={navLogo} alt="" />
+          </NavLink>
         </div>
         <div className=" hidden md:flex">
           <ul className="menu menu-horizontal px-1">
