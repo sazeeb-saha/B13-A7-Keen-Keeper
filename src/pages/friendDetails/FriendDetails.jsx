@@ -86,10 +86,10 @@ const FriendDetails = () => {
     <div className="container mx-auto mt-20 mb-20">
       <div className=" w-10/12 mx-auto">
         {/* upper */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* card */}
           <div>
-            <div className="bg-white p-6 rounded-xl flex flex-col justify-center items-center text-center  shadow col-span-1 ">
+            <div className="bg-white p-6 rounded-xl flex flex-col justify-center items-center text-center  shadow lg:col-span-1 ">
               <div>
                 <img
                   className="rounded-full"
@@ -146,7 +146,7 @@ const FriendDetails = () => {
           </div>
           {/* more details */}
           <div className="col-span-2 space-y-6">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div className="text-center shadow bg-white px-4 py-8 w-full">
                 <p className="text-3xl font-semibold">
                   {expectedFriend.days_since_contact}
@@ -179,7 +179,7 @@ const FriendDetails = () => {
             </div>
             <div className="bg-white shadow p-6">
               <h2 className="text-xl font-medium mb-1">Quick Check-In</h2>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div
                   onClick={() => handleCheckIn("Call")}
                   className="btn p-6 flex-col h-fit text-lg  "

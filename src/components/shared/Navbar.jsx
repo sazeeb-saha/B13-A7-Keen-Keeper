@@ -1,83 +1,110 @@
-import React, { useState } from "react";
+import React from "react";
 import { RiHome2Line, RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
-import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import navLogo from "../../assets/logo.png";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  const navLinkStyle = ({ isActive }) =>
-    `flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 font-medium ${
-      isActive
-        ? "bg-green-800 text-white shadow-md"
-        : "text-gray-700 hover:bg-green-100 hover:text-green-800"
-    }`;
-
-  const mobileClose = () => setOpen(false);
-
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <NavLink to="/" className="flex items-center gap-2">
-            <img src={navLogo} alt="Logo" className="w-28 object-contain" />
-          </NavLink>
+    <div className="navbar bg-base-100 shadow-sm">
+      <div className=" container  mx-auto flex justify-between">
+        <div className=" flex items-center   ">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  `${isActive ? "p-2 bg-green-900 text-white font-bold rounded" : "p-2 rounded hover:bg-gray-200"}`
+                }
+              >
+                <button className=" flex items-center gap-2 cursor-pointer">
+                  <RiHome2Line /> Home
+                </button>
+              </NavLink>
 
-          <div className="hidden md:flex items-center gap-3">
-            <NavLink to="/" className={navLinkStyle}>
-              <RiHome2Line size={18} />
-              Home
-            </NavLink>
+              <NavLink
+                to={"/timeline"}
+                className={({ isActive }) =>
+                  `${isActive ? "p-2 bg-green-900 text-white font-bold rounded" : "p-2 rounded hover:bg-gray-200"}`
+                }
+              >
+                <button className=" flex items-center gap-2 cursor-pointer">
+                  <RiTimeLine /> Timeline
+                </button>
+              </NavLink>
 
-            <NavLink to="/timeline" className={navLinkStyle}>
-              <RiTimeLine size={18} />
-              Timeline
-            </NavLink>
-
-            <NavLink to="/stats" className={navLinkStyle}>
-              <TfiStatsUp size={16} />
-              Stats
-            </NavLink>
+              <NavLink
+                to={"/stats"}
+                className={({ isActive }) =>
+                  `${isActive ? "p-2 bg-green-900 text-white font-bold rounded " : "p-2 rounded hover:bg-gray-200"}`
+                }
+              >
+                <button className=" flex items-center gap-2 cursor-pointer">
+                  <TfiStatsUp /> Stats
+                </button>
+              </NavLink>
+            </ul>
           </div>
-
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
-          >
-            {open ? <HiX size={26} /> : <HiMenuAlt3 size={26} />}
-          </button>
+          <img src={navLogo} alt="" className="h-[50px] w-[190px]" />
         </div>
-
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            open ? "max-h-72 pb-4" : "max-h-0"
-          }`}
-        >
-          <div className="flex flex-col gap-2 pt-2">
-            <NavLink to="/" className={navLinkStyle} onClick={mobileClose}>
-              <RiHome2Line size={18} />
-              Home
+        <div className=" hidden md:flex">
+          <ul className="menu menu-horizontal px-1">
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `${isActive ? "p-2 bg-green-900 text-white font-bold rounded" : "p-2 rounded hover:bg-gray-200"}`
+              }
+            >
+              <button className=" flex items-center gap-2 cursor-pointer">
+                <RiHome2Line /> Home
+              </button>
             </NavLink>
 
             <NavLink
-              to="/timeline"
-              className={navLinkStyle}
-              onClick={mobileClose}
+              to={"/timeline"}
+              className={({ isActive }) =>
+                `${isActive ? "p-2 bg-green-900 text-white font-bold rounded" : "p-2 rounded hover:bg-gray-200"}`
+              }
             >
-              <RiTimeLine size={18} />
-              Timeline
+              <button className=" flex items-center gap-2 cursor-pointer">
+                <RiTimeLine /> Timeline
+              </button>
             </NavLink>
 
-            <NavLink to="/stats" className={navLinkStyle} onClick={mobileClose}>
-              <TfiStatsUp size={16} />
-              Stats
+            <NavLink
+              to={"/stats"}
+              className={({ isActive }) =>
+                `${isActive ? "p-2 bg-green-900 text-white font-bold rounded " : "p-2 rounded hover:bg-gray-200"}`
+              }
+            >
+              <button className=" flex items-center gap-2 cursor-pointer">
+                <TfiStatsUp /> Stats
+              </button>
             </NavLink>
-          </div>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
