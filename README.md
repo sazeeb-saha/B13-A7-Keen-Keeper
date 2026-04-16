@@ -1,16 +1,30 @@
-# React + Vite
+# Keen Keeper 🧠✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Keen Keeper is a smart relationship management web application that helps users keep track of their important connections. It allows users to monitor interactions, maintain timelines, and view useful statistics to build stronger personal and professional relationships.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Keen Keeper](https://keen-keeper-saz.vercel.app/)
 
-## React Compiler
+## 🚀 Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- React Router
+- Tailwind CSS
+- DaisyUI
+- JavaScript (ES6)
+- Local Storage / JSON Data
 
-## Expanding the ESLint configuration
+## 🌟 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Friend Relationship Tracking
+
+Easily manage and organize your important contacts with detailed friend cards and profile information.
+
+### 2. Timeline Management
+
+Track communication history and relationship events through an interactive timeline system.
+
+### 3. Insightful Statistics Dashboard
+
+Visualize friendship data, overdue contacts, and engagement stats in a clean dashboard.
