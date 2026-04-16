@@ -18,7 +18,7 @@ const Banner = () => {
       </div>
       <div className="w-10/12 mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center justify-between mt-10">
         <div className="text-center shadow bg-white px-4 py-8 w-full ">
-          <h2 className="font-semibold text-3xl mb-2 ">10</h2>
+          <h2 className="font-semibold text-3xl mb-2 ">08</h2>
           <p>Total friends</p>
         </div>
         <div className="text-center shadow bg-white px-4 py-8 w-full">
@@ -26,11 +26,11 @@ const Banner = () => {
           <p>On Track</p>
         </div>
         <div className="text-center shadow bg-white px-4 py-8 w-full ">
-          <h2 className="font-semibold text-3xl mb-2 ">06</h2>
+          <h2 className="font-semibold text-3xl mb-2 ">03</h2>
           <p>Need Attention</p>
         </div>
         <div className="text-center shadow bg-white px-4 py-8 w-full  ">
-          <h2 className="font-semibold text-3xl mb-2 ">12</h2>
+          <h2 className="font-semibold text-3xl mb-2 ">08</h2>
           <p>Interactions This Month</p>
         </div>
       </div>
